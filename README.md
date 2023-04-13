@@ -17,19 +17,19 @@ This GUI has 3 fields and 5 buttons.
 The third field is the item list, this will show the name and the mpu, you can scroll down so dont worry if it looks like an item wasnt added. 
 Ex. Nonexistent Atomizer - 2.0
 
-### Add items: 
+#### Add items: 
 Adds an item with the name from "Name:" and mpu from "MPU:" in a "Name - MPU" format to the item list field, in the text file it will be Name,MPU format. If an item you are trying to add to the current items list already exists in the all items list, you only need to enter the name and not the MPU as it will grab it from there, likewise an item that is added to the current items list will not be duplicated in the all items list if it already exists there.
 
-### Save Current Items: 
+#### Save Current Items: 
 Saves current items list, redundant as switching item lists also does this.
 
-### Reset Current Items: 
+#### Reset Current Items: 
 Wipes the current items list.
 
-### Show Current Items / Show All Items: 
+#### Show Current Items / Show All Items: 
 Switches between the list shown in the third field.
 
-### Quit: 
+#### Quit: 
 Crashes the program, just hit the X instead once youve saved as there is no reason to hit quit at the moment.
 
 ## Known bugs
