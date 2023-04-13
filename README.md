@@ -1,7 +1,5 @@
 # Mechanical-Ascension-X-Sort-GUI
 
-The script was made in python, so make sure to use an IDE that supports it, I use Spyder.
-
 ## Set up
 To set up the script, open the "Mechanical Ascension X Sort GUI.py" file in your IDE.
 You will need to manually enter a directory to where your text files will be stored where it says [Filepath]. Ex. C:/Users/Yourname/Documents
@@ -30,17 +28,19 @@ Wipes the current items list.
 Switches between the list shown in the third field.
 
 #### Quit: 
-Crashes the program, just hit the X instead once youve saved as there is no reason to hit quit at the moment.
+Crashes the script, just hit the X instead once youve saved as there is no reason to hit quit at the moment.
 
 ## Known bugs
 
-Having a blank line in your txt file will cause the program to not run and spit out the error:
+Having a blank line in your txt file will cause the script not to run and spit out the error:
 ValueError: not enough values to unpack (expected 2, got 1)
 
 Quit button causes the program to crash rather than quit.
 
 ## End notes
 
-This program was made using ChatGPT in my spare time, I do not work as a developer or programmer so if there are any bugs I may not be able to fix them.
+The script was made in python, so make sure to use an IDE that supports it, I use Spyder.
+
+This script was made using ChatGPT in my spare time, I do not work as a developer or programmer so if there are any bugs I may not be able to fix them.
 
 If there are any issues with the program, feel free to let me know either on discord ( Furious Gremlin#3927 ) or on github.
