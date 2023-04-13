@@ -41,5 +41,5 @@ Quit button causes the program to crash rather than quit.
 
 ## End notes
 
-This program was made using ChatGPT in my spare time, I do not work as a developer or programmer.
+This program was made using ChatGPT in my spare time, I do not work as a developer or programmer so if there are any bugs I may not be able to fix them.
 If there are any issues with the program, feel free to let me know either on discord ( Furious Gremlin#3927 ) or on github.
