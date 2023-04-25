@@ -11,7 +11,7 @@ from tkinter import messagebox
 import json
 
 class Item:
-    def __init__(self, name, length, width, multiplier, status_effect, can_cleanse, mpu, buffed_by, cleansable_effects, use_limit, diminishing_rate, conveyor_height):
+    def __init__(self, name, length, width, multiplier, status_effect, can_cleanse, mpu, buffed_by, cleansable_effects, use_limit, diminishing_rate, conveyor_height, item_type):
         self.name = name
         self.length = length
         self.width = width
@@ -22,6 +22,7 @@ class Item:
         self.buffed_by = buffed_by
         self.use_limit = use_limit
         self.diminishing_rate = diminishing_rate
+        self.item_type = item_type
 
 
 def save_item(item):
@@ -54,6 +55,7 @@ def add_item():
     use_limit = int(use_limit_entry.get()) if not unlimited_uses_var.get() else -1
     diminishing_rate = float(diminishing_rate_entry.get()) if unlimited_uses_var.get() else 0
     conveyor_height = conveyor_height_combobox.get()
+    item_type = item_type_combobox.get()
 
     existing_items = load_items()
     for item in existing_items:
@@ -61,7 +63,7 @@ def add_item():
             messagebox.showerror("Error", "An item with the same name already exists.")
             return
 
-    item = Item(name, length, width, multiplier, status_effect, can_cleanse, mpu, buffed_by, cleansable_effects, use_limit, diminishing_rate, conveyor_height)
+    item = Item(name, length, width, multiplier, status_effect, can_cleanse, mpu, buffed_by, cleansable_effects, use_limit, diminishing_rate, conveyor_height, item_type)
     save_item(item)
     messagebox.showinfo("Success", "Item added successfully.")
 
@@ -186,12 +188,19 @@ conveyor_height_combobox = ttk.Combobox(form_frame, values=["Low", "Mid", "High"
 conveyor_height_combobox.grid(row=12, column=1, sticky=tk.W)
 conveyor_height_combobox.current(0)
 
+item_type_label = ttk.Label(form_frame, text="Item Type:")
+item_type_label.grid(row=13, column=0, sticky=tk.W)
+item_type_combobox = ttk.Combobox(form_frame, values=["Mine", "Processor", "Upgrader", "Portable", "Static"], state="readonly")
+item_type_combobox.grid(row=13, column=1, sticky=tk.W)
+item_type_combobox.current(0)
+
 add_button = ttk.Button(form_frame, text="Add Item", command=add_item)
-add_button.grid(row=13, columnspan=2, sticky=(tk.W, tk.E))
+add_button.grid(row=14, columnspan=2, sticky=(tk.W, tk.E))
 
 # Sorting options
 sort_frame = ttk.Frame(root, padding="10")
 sort_frame.grid(row=1, column=0, sticky=(tk.W, tk.E))
+
 
 sort_label = ttk.Label(sort_frame, text="Sort by:")
 sort_label.grid(row=0, column=0, sticky=tk.W)
