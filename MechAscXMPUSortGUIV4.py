@@ -1,10 +1,3 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Mon Apr 24 19:06:04 2023
-
-@author: Thomas
-"""
-
 import tkinter as tk
 from tkinter import ttk
 from tkinter import messagebox
